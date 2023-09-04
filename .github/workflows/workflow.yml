@@ -1,0 +1,20 @@
+name: Manual-Workflow
+
+on: [workflow_dispatch]
+# WORKFLOW_ACTION
+permissions:
+  contents: write
+  id-token: write
+    
+jobs:
+  
+  branch-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run hello world
+        run: echo "Hello Branch Pipeline!"
+      
+      - name: create txt file
+        run: echo "original workflow"
