@@ -18,3 +18,10 @@ jobs:
       
       - name: create txt file
         run: echo "original workflow"
+
+      - name: call repository dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.ACTIONS_TOKEN }}
+          repository: VishwasD47/Test
+          event-type: test_result
