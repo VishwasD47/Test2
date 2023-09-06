@@ -28,3 +28,6 @@ jobs:
 
       - name: set up kustomize
         run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+
+      - name: check version
+        run: kustomize version
