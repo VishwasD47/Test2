@@ -5,7 +5,10 @@ on: [workflow_dispatch]
 permissions:
   contents: write
   id-token: write
-    
+
+env:
+  TEMP_IMAGE: gcr.io/bye-world/bye-me:$GITHUB_SHA
+
 jobs:
   
   branch-pipeline:
