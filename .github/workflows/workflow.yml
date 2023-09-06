@@ -34,6 +34,8 @@ jobs:
 
       # - name: check version
       #   run: kustomize version
-
+      - name: echo git commit sha
+        run: echo ${{ github.sha }}
+        
       - name: call composite action
         uses: ./.github/actions/env-act 
