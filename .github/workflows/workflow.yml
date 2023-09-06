@@ -19,9 +19,12 @@ jobs:
       - name: create txt file
         run: echo "original workflow"
 
-      - name: call repository dispatch
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.ACTIONS_TOKEN }}
-          repository: VishwasD47/Test
-          event-type: test_result
+      # - name: call repository dispatch
+      #   uses: peter-evans/repository-dispatch@v2
+      #   with:
+      #     token: ${{ secrets.ACTIONS_TOKEN }}
+      #     repository: VishwasD47/Test
+      #     event-type: test_result
+
+      - name: set up kustomize
+        run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
