@@ -26,8 +26,11 @@ jobs:
       #     repository: VishwasD47/Test
       #     event-type: test_result
 
-      - name: set up kustomize
-        run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+      # - name: set up kustomize
+      #   run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
 
-      - name: check version
-        run: kustomize version
+      # - name: check version
+      #   run: kustomize version
+
+      - name: call composite action
+        uses: ./.github/actions/env-act 
